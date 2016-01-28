@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir> <env-dir>
 
+### tambahan nggo support imagemagick
+path=`echo "$INCLUDE_PATH" | cut -d : -f 1`
+export CXX="`which g++` -I$path/ImageMagick"
 ### Configure environment
 
 set -o errexit    # always exit on error
